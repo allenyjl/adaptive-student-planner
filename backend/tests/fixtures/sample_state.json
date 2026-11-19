@@ -1,0 +1,1209 @@
+{
+ "v": 5,
+ "now": 1795006800000,
+ "onboarded": false,
+ "user": {
+  "name": "Maya Chen",
+  "email": "maya.chen@upenn.edu"
+ },
+ "prefs": {
+  "workStart": "09:00",
+  "workEnd": "20:00",
+  "sessionMin": 50,
+  "minSession": 30,
+  "maxSession": 120,
+  "breakMin": 10,
+  "energy": "morning",
+  "bufferDays": 1
+ },
+ "overrides": [],
+ "notifications": {
+  "upcoming": true,
+  "deadlines": true,
+  "changes": true,
+  "weekly": false,
+  "feedback": true
+ },
+ "tasks": [
+  {
+   "id": "t_lgn51qk",
+   "type": "assignment",
+   "title": "Graph Algorithms Problem Set",
+   "course": "CS 220",
+   "startAfter": 1794978000000,
+   "completeBy": 1795323599999,
+   "canSplit": true,
+   "rule": null,
+   "needMin": 210,
+   "totalMin": 210,
+   "predictedMin": 210,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [
+    {
+     "id": "m_8likag1",
+     "title": "Read the problems and plan",
+     "estMin": 30,
+     "done": false
+    },
+    {
+     "id": "m_m2s1vnj",
+     "title": "Problems 1–2",
+     "estMin": 60,
+     "done": false
+    },
+    {
+     "id": "m_l7grf2l",
+     "title": "Problems 3–4",
+     "estMin": 60,
+     "done": false
+    },
+    {
+     "id": "m_anoxulz",
+     "title": "Check answers and write up",
+     "estMin": 60,
+     "done": false
+    }
+   ],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 210,
+    "features": {
+     "type": "assignment",
+     "course": "CS 220"
+    }
+   }
+  },
+  {
+   "id": "t_ylbrk6w",
+   "type": "assignment",
+   "title": "Cell Respiration Lab Report",
+   "course": "BIO 201",
+   "startAfter": 1794978000000,
+   "completeBy": 1795496399999,
+   "canSplit": true,
+   "rule": null,
+   "needMin": 210,
+   "totalMin": 210,
+   "predictedMin": 210,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [
+    {
+     "id": "m_5u9d50e",
+     "title": "Analyze the data",
+     "estMin": 60,
+     "done": false
+    },
+    {
+     "id": "m_ej33dkj",
+     "title": "Make figures and tables",
+     "estMin": 50,
+     "done": false
+    },
+    {
+     "id": "m_eaw62gr",
+     "title": "Write results and discussion",
+     "estMin": 60,
+     "done": false
+    },
+    {
+     "id": "m_px9842j",
+     "title": "Citations and proofread",
+     "estMin": 40,
+     "done": false
+    }
+   ],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 210,
+    "features": {
+     "type": "assignment",
+     "course": "BIO 201"
+    }
+   }
+  },
+  {
+   "id": "t_dmgvz8c",
+   "type": "assignment",
+   "title": "Titration Lab Experiment",
+   "course": "BIO 201",
+   "startAfter": 1794978000000,
+   "completeBy": 1795409999999,
+   "canSplit": false,
+   "rule": null,
+   "needMin": 120,
+   "totalMin": 120,
+   "predictedMin": 120,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [
+    {
+     "id": "m_ujcmo26",
+     "title": "Prep and read protocol",
+     "estMin": 30,
+     "done": false
+    },
+    {
+     "id": "m_ig2wn5i",
+     "title": "Run the experiment",
+     "estMin": 90,
+     "done": false
+    }
+   ],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 120,
+    "features": {
+     "type": "assignment",
+     "course": "BIO 201"
+    }
+   }
+  },
+  {
+   "id": "t_abvpisn",
+   "type": "assignment",
+   "title": "Midterm Review",
+   "course": "MATH 241",
+   "startAfter": 1794978000000,
+   "completeBy": 1795582799999,
+   "canSplit": true,
+   "rule": null,
+   "needMin": 240,
+   "totalMin": 240,
+   "predictedMin": 240,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 240,
+    "features": {
+     "type": "assignment",
+     "course": "MATH 241"
+    }
+   }
+  },
+  {
+   "id": "t_4olx2f6",
+   "type": "other",
+   "title": "Pick up package",
+   "course": "",
+   "startAfter": 1794978000000,
+   "completeBy": 1795237199999,
+   "canSplit": false,
+   "rule": null,
+   "needMin": 30,
+   "totalMin": 30,
+   "predictedMin": 30,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 30,
+    "features": {
+     "type": "other",
+     "course": ""
+    }
+   }
+  },
+  {
+   "id": "t_yfluovz",
+   "type": "other",
+   "title": "Laundry",
+   "course": "",
+   "startAfter": 1795237200000,
+   "completeBy": 1795409999999,
+   "canSplit": false,
+   "rule": {
+    "freq": "weekly",
+    "every": 1,
+    "days": [
+     6,
+     0
+    ],
+    "mode": "any",
+    "nth": 1,
+    "ends": {
+     "type": "after",
+     "count": 4,
+     "date": null
+    }
+   },
+   "needMin": 60,
+   "totalMin": 60,
+   "predictedMin": 60,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 60,
+    "features": {
+     "type": "other",
+     "course": ""
+    }
+   },
+   "seriesId": "ser-laundry",
+   "allowedDays": [
+    6,
+    0
+   ],
+   "dayWindow": {
+    "from": "10:00",
+    "to": "20:00"
+   }
+  },
+  {
+   "id": "t_99m5kk5",
+   "type": "other",
+   "title": "Laundry",
+   "course": "",
+   "startAfter": 1795842000000,
+   "completeBy": 1796014799999,
+   "canSplit": false,
+   "rule": {
+    "freq": "weekly",
+    "every": 1,
+    "days": [
+     6,
+     0
+    ],
+    "mode": "any",
+    "nth": 1,
+    "ends": {
+     "type": "after",
+     "count": 4,
+     "date": null
+    }
+   },
+   "needMin": 60,
+   "totalMin": 60,
+   "predictedMin": 60,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 60,
+    "features": {
+     "type": "other",
+     "course": ""
+    }
+   },
+   "seriesId": "ser-laundry",
+   "allowedDays": [
+    6,
+    0
+   ],
+   "dayWindow": {
+    "from": "10:00",
+    "to": "20:00"
+   }
+  },
+  {
+   "id": "t_k61fbgg",
+   "type": "other",
+   "title": "Laundry",
+   "course": "",
+   "startAfter": 1796446800000,
+   "completeBy": 1796619599999,
+   "canSplit": false,
+   "rule": {
+    "freq": "weekly",
+    "every": 1,
+    "days": [
+     6,
+     0
+    ],
+    "mode": "any",
+    "nth": 1,
+    "ends": {
+     "type": "after",
+     "count": 4,
+     "date": null
+    }
+   },
+   "needMin": 60,
+   "totalMin": 60,
+   "predictedMin": 60,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 60,
+    "features": {
+     "type": "other",
+     "course": ""
+    }
+   },
+   "seriesId": "ser-laundry",
+   "allowedDays": [
+    6,
+    0
+   ],
+   "dayWindow": {
+    "from": "10:00",
+    "to": "20:00"
+   }
+  },
+  {
+   "id": "t_5om2gvv",
+   "type": "other",
+   "title": "Laundry",
+   "course": "",
+   "startAfter": 1797051600000,
+   "completeBy": 1797224399999,
+   "canSplit": false,
+   "rule": {
+    "freq": "weekly",
+    "every": 1,
+    "days": [
+     6,
+     0
+    ],
+    "mode": "any",
+    "nth": 1,
+    "ends": {
+     "type": "after",
+     "count": 4,
+     "date": null
+    }
+   },
+   "needMin": 60,
+   "totalMin": 60,
+   "predictedMin": 60,
+   "loggedMin": 0,
+   "pace": 1,
+   "milestones": [],
+   "status": "active",
+   "sched": "scheduled",
+   "shortfallMin": 0,
+   "sample": true,
+   "prediction": {
+    "model": "placeholder-v0",
+    "minutes": 60,
+    "features": {
+     "type": "other",
+     "course": ""
+    }
+   },
+   "seriesId": "ser-laundry",
+   "allowedDays": [
+    6,
+    0
+   ],
+   "dayWindow": {
+    "from": "10:00",
+    "to": "20:00"
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "id": "b_5283r2n",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1794837600000,
+   "end": 1794842100000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_u0kjolm",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1795010400000,
+   "end": 1795014900000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_1azs3be",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1795183200000,
+   "end": 1795187700000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_8if39z9",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1794929400000,
+   "end": 1794933900000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_prnvakn",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1795102200000,
+   "end": 1795106700000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_2827qc8",
+   "kind": "anchored",
+   "title": "BIO 201 Lab",
+   "course": "BIO 201",
+   "start": 1795024800000,
+   "end": 1795032000000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-bio201",
+   "sample": true
+  },
+  {
+   "id": "b_sd06iql",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1795442400000,
+   "end": 1795446900000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_90bcrkt",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1795615200000,
+   "end": 1795619700000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_91j9sve",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1795788000000,
+   "end": 1795792500000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_0qka169",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1795534200000,
+   "end": 1795538700000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_ywpqq2a",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1795707000000,
+   "end": 1795711500000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_lstio8m",
+   "kind": "anchored",
+   "title": "BIO 201 Lab",
+   "course": "BIO 201",
+   "start": 1795629600000,
+   "end": 1795636800000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-bio201",
+   "sample": true
+  },
+  {
+   "id": "b_bbk4s4l",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796047200000,
+   "end": 1796051700000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_yrm8674",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796220000000,
+   "end": 1796224500000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_lm8jtj4",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796392800000,
+   "end": 1796397300000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_qme6vl7",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1796139000000,
+   "end": 1796143500000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_041gxnn",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1796311800000,
+   "end": 1796316300000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_1na2zrv",
+   "kind": "anchored",
+   "title": "BIO 201 Lab",
+   "course": "BIO 201",
+   "start": 1796234400000,
+   "end": 1796241600000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-bio201",
+   "sample": true
+  },
+  {
+   "id": "b_g86wmg8",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796652000000,
+   "end": 1796656500000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_60qv368",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796824800000,
+   "end": 1796829300000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_dsij0kz",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1796997600000,
+   "end": 1797002100000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_rfeomq8",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1796743800000,
+   "end": 1796748300000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_7q5vx1z",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1796916600000,
+   "end": 1796921100000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_ap3z9sv",
+   "kind": "anchored",
+   "title": "BIO 201 Lab",
+   "course": "BIO 201",
+   "start": 1796839200000,
+   "end": 1796846400000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-bio201",
+   "sample": true
+  },
+  {
+   "id": "b_2t9r47w",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1797256800000,
+   "end": 1797261300000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_3w1rkea",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1797429600000,
+   "end": 1797434100000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_e5uaxma",
+   "kind": "anchored",
+   "title": "CS 220 Lecture",
+   "course": "CS 220",
+   "start": 1797602400000,
+   "end": 1797606900000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-cs220",
+   "sample": true
+  },
+  {
+   "id": "b_egjybuj",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1797348600000,
+   "end": 1797353100000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_8sc68wn",
+   "kind": "anchored",
+   "title": "MATH 241 Lecture",
+   "course": "MATH 241",
+   "start": 1797521400000,
+   "end": 1797525900000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-math241",
+   "sample": true
+  },
+  {
+   "id": "b_xj6dwp7",
+   "kind": "anchored",
+   "title": "BIO 201 Lab",
+   "course": "BIO 201",
+   "start": 1797444000000,
+   "end": 1797451200000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "class",
+   "seriesId": "class-bio201",
+   "sample": true
+  },
+  {
+   "id": "b_qfu5eud",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1795041000000,
+   "end": 1795044600000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_vgvx2zx",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1795213800000,
+   "end": 1795217400000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_toaxpho",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1795473000000,
+   "end": 1795476600000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_jigrio9",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1795645800000,
+   "end": 1795649400000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_sshw6zd",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1795818600000,
+   "end": 1795822200000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_hu63iru",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1796077800000,
+   "end": 1796081400000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_mq8u2g5",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1796250600000,
+   "end": 1796254200000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_pvhxa11",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1796423400000,
+   "end": 1796427000000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_mb47ugn",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1796682600000,
+   "end": 1796686200000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_f8df852",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1796855400000,
+   "end": 1796859000000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_2nqa3tu",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1797028200000,
+   "end": 1797031800000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_o3hc6tq",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1797287400000,
+   "end": 1797291000000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_5n2hcfp",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1797460200000,
+   "end": 1797463800000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_ftrqu99",
+   "kind": "anchored",
+   "title": "Gym",
+   "start": 1797633000000,
+   "end": 1797636600000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "seriesId": "gym",
+   "sample": true
+  },
+  {
+   "id": "b_0c4st1h",
+   "kind": "anchored",
+   "title": "Dentist appointment",
+   "start": 1795294800000,
+   "end": 1795298400000,
+   "state": "planned",
+   "anchored": true,
+   "eventType": "event",
+   "sample": true
+  },
+  {
+   "id": "s_t1uxg02",
+   "kind": "session",
+   "taskId": "t_lgn51qk",
+   "title": "Graph Algorithms Problem Set",
+   "start": 1795014900000,
+   "end": 1795017900000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_9k9axtt",
+   "kind": "session",
+   "taskId": "t_lgn51qk",
+   "title": "Graph Algorithms Problem Set",
+   "start": 1795096800000,
+   "end": 1795099800000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_c1rfteq",
+   "kind": "session",
+   "taskId": "t_lgn51qk",
+   "title": "Graph Algorithms Problem Set",
+   "start": 1795187700000,
+   "end": 1795190700000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_3l87i3e",
+   "kind": "session",
+   "taskId": "t_lgn51qk",
+   "title": "Graph Algorithms Problem Set",
+   "start": 1795018500000,
+   "end": 1795022100000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_4evjp60",
+   "kind": "session",
+   "taskId": "t_4olx2f6",
+   "title": "Pick up package",
+   "start": 1795022700000,
+   "end": 1795024500000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_qb97dn4",
+   "kind": "session",
+   "taskId": "t_dmgvz8c",
+   "title": "Titration Lab Experiment",
+   "start": 1795032000000,
+   "end": 1795039200000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_qtp6t7s",
+   "kind": "session",
+   "taskId": "t_ylbrk6w",
+   "title": "Cell Respiration Lab Report",
+   "start": 1795044600000,
+   "end": 1795047600000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_3taepbn",
+   "kind": "session",
+   "taskId": "t_ylbrk6w",
+   "title": "Cell Respiration Lab Report",
+   "start": 1795100400000,
+   "end": 1795102200000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_08apggd",
+   "kind": "session",
+   "taskId": "t_ylbrk6w",
+   "title": "Cell Respiration Lab Report",
+   "start": 1795191300000,
+   "end": 1795194300000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_660z6ju",
+   "kind": "session",
+   "taskId": "t_ylbrk6w",
+   "title": "Cell Respiration Lab Report",
+   "start": 1795269600000,
+   "end": 1795272600000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_e8o3n8h",
+   "kind": "session",
+   "taskId": "t_ylbrk6w",
+   "title": "Cell Respiration Lab Report",
+   "start": 1795356000000,
+   "end": 1795357800000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_cbv5mp1",
+   "kind": "session",
+   "taskId": "t_yfluovz",
+   "title": "Laundry",
+   "start": 1795273200000,
+   "end": 1795276800000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_h1ozih7",
+   "kind": "session",
+   "taskId": "t_abvpisn",
+   "title": "Midterm Review",
+   "start": 1795048200000,
+   "end": 1795050000000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_16s45xa",
+   "kind": "session",
+   "taskId": "t_abvpisn",
+   "title": "Midterm Review",
+   "start": 1795106700000,
+   "end": 1795109700000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_2rs8qgt",
+   "kind": "session",
+   "taskId": "t_abvpisn",
+   "title": "Midterm Review",
+   "start": 1795194900000,
+   "end": 1795197900000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_kmh6lvd",
+   "kind": "session",
+   "taskId": "t_abvpisn",
+   "title": "Midterm Review",
+   "start": 1795277400000,
+   "end": 1795280400000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_qxbjxkr",
+   "kind": "session",
+   "taskId": "t_abvpisn",
+   "title": "Midterm Review",
+   "start": 1795358400000,
+   "end": 1795362000000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_18ca1kh",
+   "kind": "session",
+   "taskId": "t_99m5kk5",
+   "title": "Laundry",
+   "start": 1795878000000,
+   "end": 1795881600000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_rgauios",
+   "kind": "session",
+   "taskId": "t_k61fbgg",
+   "title": "Laundry",
+   "start": 1796482800000,
+   "end": 1796486400000,
+   "state": "planned",
+   "anchored": false
+  },
+  {
+   "id": "s_zuisu1h",
+   "kind": "session",
+   "taskId": "t_5om2gvv",
+   "title": "Laundry",
+   "start": 1797087600000,
+   "end": 1797091200000,
+   "state": "planned",
+   "anchored": false
+  }
+ ],
+ "pending": [],
+ "completed": []
+}
