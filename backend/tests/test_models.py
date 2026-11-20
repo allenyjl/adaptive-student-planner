@@ -86,3 +86,19 @@ def test_a_task_missing_a_required_field_is_rejected() -> None:
     del task["title"]
     with pytest.raises(ValidationError):
         Task.model_validate(task)
+
+
+def test_a_time_of_day_may_run_to_the_end_of_the_day() -> None:
+    """The web app writes "24:00" when a repeating task has a start time but no end time."""
+    task = a_task(dayWindow={"from": "18:00", "to": "24:00"})
+    assert roundtrip(Task, task) == task
+
+
+@pytest.mark.parametrize(
+    "window",
+    [{"from": "24:00", "to": "24:00"}, {"from": "18:00", "to": "24:30"}],
+    ids=["starts-at-24", "past-24"],
+)
+def test_only_the_end_of_a_time_of_day_may_be_24_00(window: dict[str, str]) -> None:
+    with pytest.raises(ValidationError):
+        Task.model_validate(a_task(dayWindow=window))

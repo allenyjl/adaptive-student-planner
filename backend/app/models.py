@@ -20,11 +20,12 @@ Contents, in order:
   6. Block                one entry on the calendar
   7. Feedback and history Pending, CompletedRecord
   8. Settings             Notifications
+  9. Saving many changes  TaskChanges, BlockChanges, ChangeSet, SyncResult, Snapshot
 """
 
 from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 from pydantic.alias_generators import to_camel
 
 # =============================================================================
@@ -41,6 +42,10 @@ TimestampMs = Annotated[int, Field(ge=0)]
 
 # A time of day as "HH:MM" on a 24-hour clock, from "00:00" to "23:59".
 Clock = Annotated[str, StringConstraints(pattern=r"^([01]\d|2[0-3]):[0-5]\d$")]
+
+# A time of day that ends a range, so it may also be "24:00": midnight at the end of the day.
+# The web app writes "24:00" when a task's time of day has a start but no end.
+EndClock = Annotated[str, StringConstraints(pattern=r"^(([01]\d|2[0-3]):[0-5]\d|24:00)$")]
 
 # A day of the week as a number: Sunday is 0, Saturday is 6.
 Weekday = Annotated[int, Field(ge=0, le=6)]
@@ -85,6 +90,15 @@ class Prefs(ApiModel):
 
     energy: Energy  # the time of day the student prefers to work
     buffer_days: Annotated[int, Field(ge=0)]  # finish this many days before the deadline
+
+    @model_validator(mode="after")
+    def session_lengths_are_in_order(self) -> "Prefs":
+        """Shortest session <= preferred session <= longest session, and none are zero."""
+        if not 0 < self.min_session <= self.session_min <= self.max_session:
+            raise ValueError(
+                "session lengths must satisfy 0 < minSession <= sessionMin <= maxSession"
+            )
+        return self
 
 
 class Override(ApiModel):
@@ -195,7 +209,7 @@ class DayWindow(ApiModel):
 
     # Python reserves the word "from", so the field is from_ here and "from" in JSON.
     from_: Clock = Field(alias="from")
-    to: Clock
+    to: EndClock  # "24:00" means up to the end of the day
 
 
 # =============================================================================
@@ -293,6 +307,13 @@ class Block(ApiModel):
     # --- Sample data marker ---
     sample: bool | None = None  # True for seeded demo data, never for a real record
 
+    @model_validator(mode="after")
+    def end_is_after_start(self) -> "Block":
+        """A block has to last some time: its end must come after its start."""
+        if self.end <= self.start:
+            raise ValueError("end must be after start")
+        return self
+
 
 # =============================================================================
 # 7. Feedback and history
@@ -337,3 +358,62 @@ class Notifications(ApiModel):
     changes: bool  # the planner moved something
     weekly: bool  # a weekly summary
     feedback: bool  # a session ended and needs feedback
+
+
+# =============================================================================
+# 9. Saving many changes at once
+#    One action in the web app can change many things: adding a task creates the
+#    task and several sessions, and may move another task's sessions. POST /sync
+#    takes all of those changes together and applies all of them or none.
+# =============================================================================
+
+
+class TaskChanges(ApiModel):
+    """TaskChanges: the tasks to save and the tasks to delete."""
+
+    save: list[Task] = []  # new tasks, and changed tasks in full
+    delete: list[str] = []  # ids of tasks to delete; their blocks are deleted too
+
+
+class BlockChanges(ApiModel):
+    """BlockChanges: the calendar blocks to save and the blocks to delete."""
+
+    save: list[Block] = []  # new blocks, and changed blocks in full
+    delete: list[str] = []  # ids of blocks to delete
+
+
+class ChangeSet(ApiModel):
+    """ChangeSet: everything one action in the web app changed.
+
+    Every part is optional; leave out what did not change.
+    """
+
+    tasks: TaskChanges = TaskChanges()
+    blocks: BlockChanges = BlockChanges()
+    prefs: Prefs | None = None  # the full preferences, if they changed
+
+
+class SyncResult(ApiModel):
+    """SyncResult: how many things a ChangeSet changed."""
+
+    tasks_saved: int
+    tasks_deleted: int
+    blocks_saved: int
+    blocks_deleted: int  # includes blocks removed because their task was deleted
+    prefs_saved: bool
+    store_id: str  # which copy of the data this was saved to; see Snapshot
+
+
+class Snapshot(ApiModel):
+    """Snapshot: everything the server holds, read in one go.
+
+    store_id identifies this copy of the data. While data is kept in memory it changes
+    every time the server restarts, because a restart loses the data. The web app compares
+    it with the one it saw before: a different id means the server no longer has what was
+    sent earlier, so the web app sends everything again.
+    """
+
+    store_id: str
+    tasks: list[Task]
+    blocks: list[Block]
+    prefs: Prefs | None  # None until preferences are saved for the first time

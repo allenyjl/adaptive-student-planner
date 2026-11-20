@@ -4,7 +4,7 @@
    milestones, estimate) or a task that is not an assignment (earliest and latest time,
    duration). Submitting an anchored task runs the overlap check; floating work runs the
    fit check (schedule.tsx). */
-import { useState, type ChangeEvent } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent } from 'react';
 import * as U from '../domain/util';
 import * as E from '../domain/engine';
 import * as A from '../domain/assistant';
@@ -56,6 +56,12 @@ function AddTask({ opts, done }: { opts: { when?: 'anchored' | 'floating'; start
   const s = useAppState();
   const [f, setF] = useState<TaskForm>(() => newTaskForm(s.now, opts));
   const [err, setErr] = useState('');
+  // The message sits at the bottom of a form that scrolls, so on a long form it can be out
+  // of sight and "Add task" looks as if it did nothing. Each refused attempt brings it
+  // into view. (A counter, because the same message can be refused twice in a row.)
+  const [refusals, setRefusals] = useState(0);
+  const errRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (refusals) errRef.current?.scrollIntoView?.({ block: 'nearest' }); }, [refusals]);
   const [editorKey, setEditorKey] = useState(0);
   const set = (patch: Partial<TaskForm>) => { setF((x) => ({ ...x, ...patch })); setErr(''); };
   const bind = (key: Keys<string>) => ({ value: f[key], onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => set({ [key]: e.target.value }) });
@@ -227,7 +233,7 @@ function AddTask({ opts, done }: { opts: { when?: 'anchored' | 'floating'; start
 
   const submit = () => {
     const c = collect(f, f.milestones ? normalizeMilestones(f.milestones) : []);
-    if ('error' in c) { setErr(c.error); return; }
+    if ('error' in c) { setErr(c.error); setRefusals((n) => n + 1); return; }
     done({ c, f });
   };
 
@@ -245,7 +251,7 @@ function AddTask({ opts, done }: { opts: { when?: 'anchored' | 'floating'; start
         <p className="hint">{f.when === 'anchored' ? 'Anchored tasks stay at the time you choose. Inflow plans around them.' : 'Floating tasks are placed in your free time before the deadline.'}</p>
         {f.when === 'anchored' ? anchoredSection() : floatingSection()}
         <datalist id="course-list">{courses.map((c) => <option key={c} value={c} />)}</datalist>
-        <div className="form-error" role="alert">{err}</div>
+        <div className="form-error" role="alert" ref={errRef}>{err}</div>
       </div>
     </Modal>
   );

@@ -102,6 +102,44 @@ the **fit check** (also called fill logic).
   version's scope, MVP acceptance criteria, and the stack. Record explicit human choices
   before implementation.
 
+## Backend and saving (proposed, branch `feat/backend-fastapi`)
+
+Status: Proposed by Sheila Bukenya, built with AI assistance. Not reviewed or adopted by the
+team. The backend stack is still an open decision ([question 4](questions.md)); this branch
+is a candidate to review, and no decision record has been written for it yet.
+
+**What exists (as of 2026-11-19).** Committed: the FastAPI skeleton and the Pydantic models
+(`b33065d`). **Uncommitted** in the working tree: every endpoint and the web app's
+connection to them.
+
+- [backend/](../backend/README.md): FastAPI, with models mirroring `web/src/domain/types.ts`.
+  Endpoints for tasks, calendar blocks, and preferences, plus `GET /sync` (read everything)
+  and `POST /sync` (save many changes, all or none, safe to retry). Data is kept in memory:
+  no database, no accounts.
+- `web/`: new `src/state/api.ts`, `src/state/sync.ts`, `src/components/SyncStatus.tsx`, and
+  `.env.example`; small edits to `src/main.tsx`, `src/App.tsx`, `src/styles.css`, and
+  `vite.config.ts`. Saving to the backend is off unless `VITE_SYNC=on`; with it off the app
+  behaves as before. `src/state/store.ts` and the scheduling engine are unchanged. How to run
+  it is in [web/README.md](../web/README.md#save-to-the-backend-optional-proposed).
+
+**How to verify.** `./scripts/check.sh` runs both halves: 100 web tests and 90 backend tests,
+all passing on 2026-11-19. Needs `uv` for the backend. The sync code was also run against a
+live backend, including restarts, with a throwaway script that is not in the repo. Nobody has
+clicked through it in a browser yet.
+
+**Open, for the team or the next session:**
+
+- Howard has not been told about the edits in `web/`. He should review them.
+- Team decisions this depends on: the backend stack and database (question 4), and whether
+  the server or the web app owns the default preferences (question 8; today the web app does,
+  and `GET /prefs` answers 404 until some are saved).
+- Not built: a database, accounts and per-student ownership, and server storage for
+  finished-assignment records (`completed`, the data the adaptive part learns from), pending
+  feedback, temporary relaxations, and notification settings.
+- Clock times ("09:00") are in the student's timezone, which is not stored anywhere yet.
+- The root README still says there is no backend. Allen owns it; update it with the PR.
+- `syllabus-testset/` is untracked and belongs to the separate `feat/course-doc-import` work.
+
 ## Next step
 
 Howard reviews and commits the React conversion on `hxu/ui-first-pass`, then opens a PR to

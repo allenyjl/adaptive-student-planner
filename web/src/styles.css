@@ -68,6 +68,10 @@ li.is-done { color: var(--muted); }
 .nav-item.is-on { background: var(--accent-soft); color: var(--accent-ink); }
 .nav-btn { margin-top: 14px; }
 .count { margin-left: auto; background: var(--warn); color: #fff; font-size: 11px; font-weight: 700; min-width: 20px; height: 20px; border-radius: 10px; display: grid; place-items: center; padding: 0 6px; }
+/* Whether changes have reached the server. Shown only when the app is connected to one. */
+.sync { font-size: 12px; color: var(--muted); padding: 0 10px; }
+.sync-saved { color: var(--ok); }
+.sync-error { color: #78350f; background: var(--warn-soft); border: 1px solid var(--warn-line); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .user { display: flex; align-items: center; gap: 10px; padding: 10px; background: var(--bg); border-radius: 10px; }
 .avatar { width: 32px; height: 32px; border-radius: 50%; background: #dbeafe; color: var(--accent-ink); display: grid; place-items: center; font-weight: 600; font-size: 12px; }
 .main { padding: 28px 32px 120px; min-width: 0; outline: none; }

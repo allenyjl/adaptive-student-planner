@@ -14,6 +14,7 @@ import { PlanView } from './views/PlanView';
 import { TasksView } from './views/TasksView';
 import { DashboardView } from './views/DashboardView';
 import { SettingsView, onboarding } from './views/SettingsView';
+import { SyncStatus } from './components/SyncStatus';
 
 const ROUTES: [string, string, IconName][] = [['dashboard', 'Dashboard', 'grid'], ['plan', 'Weekly Plan', 'calendar'], ['tasks', 'Tasks', 'tasks'], ['settings', 'Settings', 'settings']];
 const current = () => { const k = (location.hash || '').replace(/^#\/?/, ''); return ROUTES.some((r) => r[0] === k) ? k : 'plan'; };
@@ -105,6 +106,7 @@ export function App() {
             </button>
           </div>
           <DemoControls />
+          <SyncStatus />
           <div className="user">
             <div className="avatar" aria-hidden="true">MC</div>
             <div><div className="task-title">Maya Chen</div><div className="muted small">Student plan</div></div>

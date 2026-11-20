@@ -8,8 +8,9 @@ away. It uses React, TypeScript, and Vite; that choice is proposed in
 team accepts the pull request. The supporting UI rules, and how the app is built, are in
 [DESIGN.md](DESIGN.md).
 
-There is no backend yet: data lives in the browser, and a demo clock stands in for real
-time.
+By default there is no backend: data lives in the browser, and a demo clock stands in for
+real time. Saving to a backend is proposed and optional; see
+[Save to the backend](#save-to-the-backend-optional-proposed).
 
 ## Run it
 
@@ -23,6 +24,37 @@ npm run dev        # then open the address it prints (http://localhost:5173)
 
 State is saved in the browser's localStorage; **Reset** in the sidebar restores the sample
 data.
+
+## Save to the backend (optional, proposed)
+
+Proposed on branch `feat/backend-fastapi`, with the backend in [backend/](../backend/README.md).
+Off by default: without the setting below, the app behaves exactly as described above.
+
+```bash
+# terminal 1: the backend
+cd backend && uv run fastapi dev app/main.py
+
+# terminal 2: the web app, with saving switched on
+cd web && cp .env.example .env.local     # once; then set VITE_SYNC=on in .env.local
+npm run dev
+```
+
+With `VITE_SYNC=on`, tasks, the calendar, and preferences are loaded from the server when
+the app starts and saved to it after every change. A line in the sidebar shows "Saving…",
+"All changes saved", or "Not saved" with a **Try again** button. If the server cannot be
+reached, changes stay in the browser and are sent when it is back.
+
+What to know:
+
+- The scheduling engine still runs in the browser. The server stores what it decided.
+- Only tasks, calendar blocks, and preferences go to the server. Feedback still waiting,
+  finished-assignment records, temporary relaxations, notification settings, and the demo
+  clock stay in the browser.
+- The backend keeps data in memory, so it forgets everything when it restarts (which
+  `fastapi dev` does on every code change). The app notices and sends everything again.
+- There are no accounts: everyone using the same backend shares one plan.
+- The code is in `src/state/api.ts` (the only file that calls the server) and
+  `src/state/sync.ts` (what to send and when). `src/state/store.ts` is unchanged.
 
 ## Check it
 
